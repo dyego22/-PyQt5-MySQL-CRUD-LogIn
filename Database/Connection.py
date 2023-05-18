@@ -1,9 +1,13 @@
 import pymysql
 
+import psycopg2
+
 def connection():
-    conn = pymysql.connect(
-        host="localhost", port=3306, user="root",
-        password="", db="ejercicio_qtpy"
-    )
+    conn = psycopg2.connect(
+            host='localhost',
+            user='postgres',
+            password='1234',
+            database='proyecto'
+        )
     print('Database is Connected!')
     return conn

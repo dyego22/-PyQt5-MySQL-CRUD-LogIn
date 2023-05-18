@@ -3,7 +3,7 @@ class User():
     def __init__(self,conn):
         self.conn = conn
         with self.conn.cursor() as cursor:
-            sql = """CREATE TABLE IF NOT EXISTS user
+            sql = """CREATE TABLE IF NOT EXISTS "user"
                         (user_name VARCHAR(21) NOT NULL,
                         password VARCHAR(191) NOT NULL)"""
             cursor.execute(sql)
